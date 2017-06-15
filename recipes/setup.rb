@@ -2,6 +2,10 @@ package 'nano' do
 	action :install
 end
 
+package 'emacs' do
+	action :install
+end
+
 package 'vim-enhanced' do
 	action :install
 end
