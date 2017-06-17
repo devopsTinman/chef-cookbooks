@@ -19,7 +19,7 @@ package 'tree' do
 end
 
 file '/etc/motd' do
-	content 'this server is owned by tinman'
+	content 'this server is owned by somebody'
 	action :create
 	owner 'root'
 	group 'root'
