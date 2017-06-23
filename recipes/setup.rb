@@ -23,6 +23,9 @@ end
 
 template '/etc/motd' do
 	source 'motd.erb'
+	variables(
+		:name => 'superman'
+	)
 	action :create
 	owner 'root'
 	group 'root'
