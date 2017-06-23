@@ -21,13 +21,8 @@ end
 # apple_count = 4
 # puts "I have #{apple_count} apples"
 
-file '/etc/motd' do
-	content "this server is owned by somebody
-	Hostname: #{node['hostname']}
-	IP Address: #{node['ipaddress']}
-	CPU: #{node['cpu']['0']['mhz']}
-	Memory: #{node['memory']['total']}
-	"
+template '/etc/motd' do
+	source 'motd.erb'
 	action :create
 	owner 'root'
 	group 'root'
